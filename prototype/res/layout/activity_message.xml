@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MessageActivity" >
+
+    <Button
+        android:id="@+id/message_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_back" />
+
+    <ImageButton
+        android:id="@+id/message_ib_mochidashi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/mochidashi"
+        android:src="@drawable/bt_mochidashi" />
+
+    <ImageButton
+        android:id="@+id/message_ib_haitatsu_kanryo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/message_ib_fuzai"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/haitatsu_kanryo"
+        android:src="@drawable/bt_haikan" />
+
+    <ImageButton
+        android:id="@+id/message_ib_fuzai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/message_ib_mochidashi"
+        android:layout_marginRight="34dp"
+        android:contentDescription="@string/fuzai"
+        android:src="@drawable/bt_fuzai" />
+
+    <TextView
+        android:id="@+id/barcode_tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_ib_mochidashi"
+        android:layout_below="@+id/message_ib_mochidashi"
+        android:text="@string/mochidashi" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_ib_fuzai"
+        android:layout_below="@+id/barcode_tv_result"
+        android:text="@string/fuzai" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_ib_haitatsu_kanryo"
+        android:layout_below="@+id/message_ib_haitatsu_kanryo"
+        android:text="@string/haitatsu_kanryo" />
+
+    <ImageButton
+        android:id="@+id/message_ib_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_alignTop="@+id/message_ib_haitatsu_kanryo"
+        android:contentDescription="@string/barcode_reader"
+        android:src="@drawable/bt_barcord" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_ib_barcode"
+        android:layout_below="@+id/message_ib_barcode"
+        android:text="@string/barcode_reader" />
+
+</RelativeLayout>

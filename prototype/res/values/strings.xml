@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">prototype</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_setup">システム設定</string>
+    <string name="title_activity_drive">運転中</string>
+    <string name="title_activity_history_list">走行履歴一覧</string>
+    <string name="title_activity_history_map">走行履歴　地図</string>
+    <string name="title_activity_message">メッセージ送信</string>
+    <string name="button_back">戻る</string>
+    <string name="button_drive">運転開始</string>
+    <string name="button_history">走行履歴</string>
+    <string name="button_message">メッセージ送信</string>
+    <string name="button_setup">設定</string>
+    <string name="terminalId">端末ID</string>
+    <string name="gpsInterval">GPS測位間隔</string>
+    <string name="gpsAcurracy">GPS精度</string>
+    <string name="gpsDistance">GPS測位距離</string>
+    <string name="historyCount">履歴保存件数</string>
+    <string name="sencerInterval">センサー間隔</string>
+    <string name="alertLimit">危険運転閾値</string>
+    <string name="alertSound">危険警告音</string>
+    <string name="aspitsConn">ASPITS連携</string>
+
+    <string-array name="gpsAcurracyArray">
+        <item>Navi</item>
+        <item>10m</item>
+        <item>100m</item>
+    </string-array>
+
+    <string name="nichiji">日時</string>
+    <string name="addr">住所</string>
+    <string name="alertFlg">アラート有無</string>
+    <string name="second">秒</string>
+    <string name="m">m</string>
+    <string name="ken">件</string>
+    <string name="blank"></string>
+    <string name="mochidashi">持ち出し</string>
+    <string name="fuzai">不在</string>
+    <string name="haitatsu_kanryo">配達完了</string>
+    <string name="logo">logo</string>
+    <string name="API_KEY">AIzaSyC8k-6AAPWtOWvUcEsHig5whu17aSQlbXM</string>
+    <string name="title_activity_yahoo_map">YahooMapActivity</string>
+    <string name="message_er_0001">現在地を取得できませんでした</string>
+    <string name="message_in_0001">現在地を取得中です</string>
+    <string name="title_activity_barcode">バーコードリーダー</string>
+    <string name="result_text">読み込み結果</string>
+    <string name="barcode_reader">バーコード読み取り</string>
+
+</resources>

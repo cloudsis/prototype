@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SetupActivity" >
+
+    <Button
+        android:id="@+id/setup_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/history_list_row_date"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_back" />
+
+    <TextView
+        android:id="@+id/history_list_row_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/terminalId"
+        android:textSize="@dimen/font_size_setup" />
+
+    <EditText
+        android:id="@+id/setup_et_terminal_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/terminalId"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <ToggleButton
+        android:id="@+id/setup_tb_aspits_conn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setup_back_button"
+        android:layout_alignLeft="@+id/setup_tb_alert_sound"
+        android:layout_marginBottom="21dp"
+        android:contentDescription="@string/alertSound"
+        android:text="@string/aspitsConn" />
+
+    <ToggleButton
+        android:id="@+id/setup_tb_alert_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setup_tb_aspits_conn"
+        android:layout_alignRight="@+id/setup_sb_gps_interval"
+        android:layout_marginRight="30dp"
+        android:contentDescription="@string/alertSound"
+        android:text="@string/alertLimit" />
+
+    <Spinner
+        android:id="@+id/setup_sp_gps_accuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setup_txt_gps_interval"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/setup_et_terminal_id"
+        android:layout_marginTop="14dp"
+        android:entries="@array/gpsAcurracyArray" />
+
+    <TextView
+        android:id="@+id/history_list_row_alert_flg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/history_list_row_date"
+        android:layout_alignTop="@+id/setup_sp_gps_accuracy"
+        android:gravity="top"
+        android:text="@string/gpsAcurracy"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/history_list_row_alert_flg"
+        android:layout_alignRight="@+id/setup_back_button"
+        android:layout_alignTop="@+id/setup_sb_gps_interval"
+        android:text="@string/gpsInterval"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView06"
+        android:layout_alignRight="@+id/setup_back_button"
+        android:layout_alignTop="@+id/setup_sb_gps_distance"
+        android:text="@string/gpsDistance"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_alignRight="@+id/setup_back_button"
+        android:layout_below="@+id/setup_sb_gps_distance"
+        android:text="@string/historyCount"
+        android:textSize="@dimen/font_size_setup" />
+
+    <SeekBar 
+        android:id="@+id/setup_sb_gps_interval" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignRight="@+id/setup_et_terminal_id" 
+        android:layout_alignTop="@+id/TextView09" 
+        android:layout_toRightOf="@+id/TextView09" 
+        android:max="60" 
+        />
+    <SeekBar 
+        android:id="@+id/setup_sb_gps_distance" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignLeft="@+id/setup_sb_gps_interval" 
+        android:layout_below="@+id/setup_sb_gps_interval" 
+        android:max="10" 
+        />
+    <SeekBar 
+        android:id="@+id/setup_sb_history_count" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignLeft="@+id/setup_sb_gps_distance" 
+        android:layout_alignParentRight="true" 
+        android:layout_below="@+id/setup_sb_gps_distance" 
+        android:max="30" 
+        />
+
+    <SeekBar
+        android:id="@+id/setup_sb_sencer_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setup_sb_history_count"
+        android:layout_below="@+id/setup_sb_history_count" 
+        android:max="10" 
+        />
+
+    <SeekBar
+        android:id="@+id/setup_sb_alert_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setup_sb_sencer_interval"
+        android:layout_below="@+id/setup_sb_sencer_interval" 
+        android:max="100" 
+        />
+    <TextView 
+        android:id="@+id/setup_txt_gps_interval" 
+        android:layout_width="30dp" 
+        android:layout_height="wrap_content" 
+        android:layout_alignBaseline="@+id/TextView09" 
+        android:layout_alignBottom="@+id/TextView09" 
+        android:layout_toLeftOf="@+id/TextView09" 
+        android:background="@color/setup_label" 
+        android:gravity="right" 
+        android:text="@string/blank" />
+
+    <TextView 
+        android:id="@+id/setup_txt_gps_distance" 
+        android:layout_width="30dp" 
+        android:layout_height="wrap_content" 
+        android:layout_alignLeft="@+id/setup_txt_gps_interval" 
+        android:layout_below="@+id/setup_sb_gps_interval" 
+        android:background="@color/setup_label" 
+        android:gravity="right" 
+        android:text="@string/blank" />
+    <TextView android:id="@+id/setup_txt_history_count" 
+        android:layout_width="30dp" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/setup_sb_gps_distance" 
+        android:layout_toLeftOf="@+id/TextView15" 
+        android:background="@color/setup_label" 
+        android:gravity="right" 
+        android:text="@string/blank" />
+    <TextView android:id="@+id/setup_txt_sencer_interval" 
+        android:layout_width="30dp" 
+        android:layout_height="wrap_content" 
+        android:layout_alignLeft="@+id/setup_txt_alert_limit" 
+        android:layout_below="@+id/setup_sb_history_count" 
+        android:background="@color/setup_label" 
+        android:gravity="right" 
+        android:text="@string/blank" />
+    <TextView android:id="@+id/setup_txt_alert_limit" 
+        android:layout_width="30dp" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/setup_sb_sencer_interval" 
+        android:layout_toLeftOf="@+id/TextView09" 
+        android:background="@color/setup_label" 
+        android:gravity="right" 
+        android:text="@string/blank" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView07"
+        android:layout_alignRight="@+id/setup_back_button"
+        android:layout_alignTop="@+id/setup_sb_sencer_interval"
+        android:text="@string/sencerInterval"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView05"
+        android:layout_alignRight="@+id/TextView05"
+        android:layout_alignTop="@+id/setup_sb_alert_limit"
+        android:text="@string/alertLimit"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView03"
+        android:layout_alignTop="@+id/setup_tb_aspits_conn"
+        android:text="@string/aspitsConn"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setup_et_terminal_id"
+        android:layout_below="@+id/setup_sp_gps_accuracy"
+        android:text="@string/second" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_alignTop="@+id/setup_tb_alert_sound"
+        android:text="@string/alertSound"
+        android:textSize="@dimen/font_size_setup" />
+
+    <TextView
+        android:id="@+id/TextView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView09"
+        android:layout_below="@+id/setup_sb_gps_interval"
+        android:text="@string/m" />
+
+    
+
+    
+
+    
+
+    <TextView
+        android:id="@+id/TextView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setup_txt_history_count"
+        android:layout_alignBottom="@+id/setup_txt_history_count"
+        android:layout_alignLeft="@+id/TextView15"
+        android:text="@string/ken" />
+
+    <TextView
+        android:id="@+id/TextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView05"
+        android:layout_toLeftOf="@+id/setup_sb_alert_limit"
+        android:text="@string/blank" />
+
+    <TextView
+        android:id="@+id/TextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView16"
+        android:layout_below="@+id/setup_sb_history_count"
+        android:layout_toLeftOf="@+id/setup_sb_history_count"
+        android:text="@string/second" />
+
+</RelativeLayout>

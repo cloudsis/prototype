@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="setup_label">#dddddd</color>
+    <color name="alert">#ff0000</color>
+    
+</resources>
